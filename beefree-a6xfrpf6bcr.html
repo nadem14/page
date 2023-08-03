@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title></title>
+<meta charset="utf-8"/>
+<meta content="width=device-width" name="viewport"/>
+<style>
+		.bee-row,
+		.bee-row-content {
+			position: relative
+		}
+
+		.bee-form .bee-form-row .bee-field button {
+			font-size: inherit;
+			font-family: inherit
+		}
+
+		.bee-menu .bee-hamburger-controls span,
+		.bee-row-1,
+		.bee-row-10,
+		.bee-row-11,
+		.bee-row-12,
+		.bee-row-13,
+		.bee-row-14,
+		.bee-row-15,
+		.bee-row-16,
+		.bee-row-17,
+		.bee-row-18,
+		.bee-row-19,
+		.bee-row-2,
+		.bee-row-3,
+		.bee-row-4,
+		.bee-row-5,
+		.bee-row-6,
+		.bee-row-7,
+		.bee-row-8,
+		.bee-row-9 {
+			background-repeat: no-repeat
+		}
+
+		body {
+			background-color: #cbe0ee;
+			color: #000;
+			font-family: Arial, Helvetica Neue, Helvetica, sans-serif
+		}
+
+		a {
+			color: #8a3c90
+		}
+
+		* {
+			box-sizing: border-box
+		}
+
+		body,
+		h1,
+		p {
+			margin: 0
+		}
+
+		.bee-menu .bee-hamburger-trigger {
+			display: none
+		}
+
+		.bee-row-content {
+			max-width: 1025px;
+			margin: 0 auto;
+			display: flex
+		}
+
+		.bee-row-content .bee-col-w1 {
+			flex-basis: 8%
+		}
+
+		.bee-row-content .bee-col-w2 {
+			flex-basis: 17%
+		}
+
+		.bee-row-content .bee-col-w3 {
+			flex-basis: 25%
+		}
+
+		.bee-row-content .bee-col-w4 {
+			flex-basis: 33%
+		}
+
+		.bee-row-content .bee-col-w5 {
+			flex-basis: 42%
+		}
+
+		.bee-row-content .bee-col-w6 {
+			flex-basis: 50%
+		}
+
+		.bee-row-content .bee-col-w8 {
+			flex-basis: 67%
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 div.label:not(.inline),
+		.bee-row-17 .bee-col-4 .bee-block-2 label:not(.inline),
+		.bee-row-content .bee-col-w12 {
+			flex-basis: 100%
+		}
+
+		.bee-button .content,
+		.bee-row-17 .bee-col-4 .bee-block-2,
+		.bee-row-17 .bee-col-4 .bee-block-2 .bee-button-container {
+			text-align: center
+		}
+
+		.bee-button a,
+		.bee-icon .bee-icon-label-right a,
+		.bee-menu ul li a {
+			text-decoration: none
+		}
+
+		.bee-divider,
+		.bee-image {
+			overflow: auto
+		}
+
+		.bee-divider .center,
+		.bee-image .bee-center {
+			margin: 0 auto
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-1,
+		.bee-row-14 .bee-col-2 .bee-block-1,
+		.bee-row-14 .bee-col-3 .bee-block-1,
+		.bee-row-15 .bee-col-1 .bee-block-1,
+		.bee-row-15 .bee-col-2 .bee-block-1,
+		.bee-row-15 .bee-col-3 .bee-block-1,
+		.bee-row-17 .bee-col-4 .bee-block-2 .bee-form-row:not(.bee-sidelabel) input:not([type=checkbox]):not([type=radio]),
+		.bee-row-4 .bee-col-3 .bee-block-1 {
+			width: 100%
+		}
+
+		.bee-form .bee-form-row .bee-field {
+			padding: 3px;
+			display: flex;
+			flex: 1;
+			flex-wrap: wrap;
+			align-items: center
+		}
+
+		.bee-form .bee-form-row .bee-field input:not([type=checkbox]):not([type=radio]) {
+			flex-grow: 1;
+			font-family: inherit;
+			font-size: inherit
+		}
+
+		.bee-form .bee-form-row .bee-field input[type=checkbox]:not(:first-of-type) {
+			margin-left: 15px
+		}
+
+		.bee-form .bee-form-row .bee-field .bee-button-container {
+			flex-grow: 1
+		}
+
+		.bee-form input[type=color] {
+			border: none;
+			height: 38px
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch-wrapper {
+			margin: 0;
+			padding: 2px
+		}
+
+		.bee-menu ul {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-form input[type=color]::-webkit-color-swatch {
+			margin: 0;
+			padding: 0
+		}
+
+		.bee-icon {
+			display: inline-block;
+			vertical-align: middle
+		}
+
+		.bee-icon .bee-content {
+			display: flex;
+			align-items: center
+		}
+
+		.bee-image img {
+			display: block;
+			width: 100%
+		}
+
+		.bee-menu .bee-hamburger-controls {
+			cursor: pointer;
+			display: inline-block;
+			position: relative
+		}
+
+		.bee-menu .bee-hamburger-controls span {
+			display: block;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			background-size: 100%;
+			transition: .12s ease-in-out
+		}
+
+		.bee-menu ul {
+			list-style-type: none
+		}
+
+		.bee-menu ul.bee-horizontal li {
+			display: inline-block
+		}
+
+		.bee-social .icon img {
+			max-height: 32px
+		}
+
+		.bee-paragraph,
+		.bee-text {
+			overflow-wrap: anywhere
+		}
+
+		.bee-row-1 .bee-row-content,
+		.bee-row-3 .bee-row-content {
+			background-color: #9ad65b;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-17 .bee-row-content,
+		.bee-row-2 .bee-row-content {
+			background-color: #9ad65b;
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-12 .bee-row-content,
+		.bee-row-13 .bee-row-content,
+		.bee-row-14 .bee-row-content,
+		.bee-row-15 .bee-row-content,
+		.bee-row-4 .bee-row-content,
+		.bee-row-5 .bee-row-content,
+		.bee-row-6 .bee-row-content {
+			background-color: #fff;
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-2 .bee-col-1 .bee-block-1 {
+			padding: 5px;
+			width: 100%
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 {
+			color: #fff;
+			font-family: inherit;
+			font-size: 11px;
+			letter-spacing: 1px;
+			text-align: center
+		}
+
+		.bee-row-4 .bee-row-content {
+			background-image: url('https://d1oco4z2z1fhwp.cloudfront.net/templates/default/7326/hero-background.png');
+			background-size: auto;
+			border-radius: 0
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-3 .bee-block-3,
+		.bee-row-15 .bee-col-1 .bee-block-3,
+		.bee-row-15 .bee-col-2 .bee-block-3,
+		.bee-row-15 .bee-col-3 .bee-block-3,
+		.bee-row-4 .bee-col-1 {
+			padding-bottom: 20px
+		}
+
+		.bee-row-4 .bee-col-2 {
+			padding-bottom: 20px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-4 .bee-col-2 .bee-block-2 {
+			padding-bottom: 30px;
+			text-align: center;
+			width: 100%
+		}
+
+		.bee-row-4 .bee-col-2 .bee-block-3,
+		.bee-row-5 .bee-col-1 .bee-block-1 {
+			padding-bottom: 30px
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-2,
+		.bee-row-4 .bee-col-2 .bee-block-4 {
+			padding: 10px;
+			text-align: center
+		}
+
+		.bee-row-4 .bee-col-3 {
+			padding: 5px 30px
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-8 .bee-col-2 .bee-block-1 {
+			padding-bottom: 30px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-6 .bee-col-2 .bee-block-2 {
+			padding: 10px 10px 30px;
+			text-align: center
+		}
+
+		.bee-row-7 .bee-row-content,
+		.bee-row-8 .bee-row-content {
+			background-color: #fafafa;
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-7 .bee-col-1 .bee-block-1 {
+			padding-bottom: 30px;
+			padding-top: 30px
+		}
+
+		.bee-row-10 .bee-row-content,
+		.bee-row-11 .bee-row-content,
+		.bee-row-9 .bee-row-content {
+			background-color: #fafafa;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-1,
+		.bee-row-10 .bee-col-3 .bee-block-1,
+		.bee-row-9 .bee-col-2 .bee-block-1,
+		.bee-row-9 .bee-col-3 .bee-block-1 {
+			padding-top: 30px;
+			width: 100%
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-10 .bee-col-3 .bee-block-2,
+		.bee-row-17 .bee-col-2 .bee-block-1,
+		.bee-row-17 .bee-col-2 .bee-block-2,
+		.bee-row-17 .bee-col-3 .bee-block-1,
+		.bee-row-17 .bee-col-3 .bee-block-2,
+		.bee-row-17 .bee-col-4 .bee-block-1,
+		.bee-row-18 .bee-col-1 .bee-block-1,
+		.bee-row-2 .bee-col-3 .bee-block-1 li,
+		.bee-row-9 .bee-col-2 .bee-block-2,
+		.bee-row-9 .bee-col-3 .bee-block-2 {
+			padding: 10px
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-10 .bee-col-3 .bee-block-3,
+		.bee-row-9 .bee-col-2 .bee-block-3,
+		.bee-row-9 .bee-col-3 .bee-block-3 {
+			padding-bottom: 10px;
+			padding-left: 10px;
+			padding-right: 10px
+		}
+
+		.bee-row-12 .bee-col-1 {
+			padding: 30px
+		}
+
+		.bee-row-14 .bee-col-1,
+		.bee-row-14 .bee-col-2,
+		.bee-row-14 .bee-col-3,
+		.bee-row-15 .bee-col-1,
+		.bee-row-15 .bee-col-2,
+		.bee-row-15 .bee-col-3 {
+			padding: 30px 20px 20px
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-3 .bee-block-2,
+		.bee-row-15 .bee-col-1 .bee-block-2,
+		.bee-row-15 .bee-col-2 .bee-block-2,
+		.bee-row-15 .bee-col-3 .bee-block-2,
+		.bee-row-19 .bee-col-1 {
+			padding-bottom: 5px;
+			padding-top: 5px
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-4,
+		.bee-row-14 .bee-col-2 .bee-block-4,
+		.bee-row-14 .bee-col-3 .bee-block-4,
+		.bee-row-15 .bee-col-1 .bee-block-4,
+		.bee-row-15 .bee-col-2 .bee-block-4,
+		.bee-row-15 .bee-col-3 .bee-block-4 {
+			text-align: left
+		}
+
+		.bee-row-16 .bee-row-content {
+			background-color: #fff;
+			background-repeat: no-repeat;
+			border-radius: 0;
+			color: #000
+		}
+
+		.bee-row-17 .bee-col-1 {
+			padding: 30px 20px 10px
+		}
+
+		.bee-row-17 .bee-col-1 .bee-block-1 {
+			padding-top: 10px;
+			width: 100%
+		}
+
+		.bee-row-17 .bee-col-2 {
+			padding: 30px 10px 10px
+		}
+
+		.bee-row-17 .bee-col-3,
+		.bee-row-17 .bee-col-4 {
+			padding: 30px 10px
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 {
+			font-family: inherit;
+			font-size: 14px;
+			padding: 10px
+		}
+
+		.bee-row-18 .bee-row-content,
+		.bee-row-19 .bee-row-content {
+			background-repeat: no-repeat;
+			color: #000
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-1 {
+			color: #9d9d9d;
+			font-family: inherit;
+			font-size: 15px;
+			padding-bottom: 5px;
+			padding-top: 5px;
+			text-align: center
+		}
+
+		.bee-row-2 .bee-col-3 .bee-block-1 li a {
+			color: #fff
+		}
+
+		.bee-row-4 .bee-col-2 .bee-block-3 {
+			color: #fff;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2 a,
+		.bee-row-10 .bee-col-2 .bee-block-3 a,
+		.bee-row-10 .bee-col-3 .bee-block-2 a,
+		.bee-row-10 .bee-col-3 .bee-block-3 a,
+		.bee-row-12 .bee-col-1 .bee-block-1 a,
+		.bee-row-13 .bee-col-2 .bee-block-1 a,
+		.bee-row-14 .bee-col-1 .bee-block-2 a,
+		.bee-row-14 .bee-col-1 .bee-block-3 a,
+		.bee-row-14 .bee-col-2 .bee-block-2 a,
+		.bee-row-14 .bee-col-2 .bee-block-3 a,
+		.bee-row-14 .bee-col-3 .bee-block-2 a,
+		.bee-row-14 .bee-col-3 .bee-block-3 a,
+		.bee-row-15 .bee-col-1 .bee-block-2 a,
+		.bee-row-15 .bee-col-1 .bee-block-3 a,
+		.bee-row-15 .bee-col-2 .bee-block-2 a,
+		.bee-row-15 .bee-col-2 .bee-block-3 a,
+		.bee-row-15 .bee-col-3 .bee-block-2 a,
+		.bee-row-15 .bee-col-3 .bee-block-3 a,
+		.bee-row-4 .bee-col-2 .bee-block-3 a,
+		.bee-row-5 .bee-col-1 .bee-block-1 a,
+		.bee-row-6 .bee-col-2 .bee-block-1 a,
+		.bee-row-7 .bee-col-1 .bee-block-1 a,
+		.bee-row-8 .bee-col-2 .bee-block-1 a,
+		.bee-row-9 .bee-col-2 .bee-block-2 a,
+		.bee-row-9 .bee-col-2 .bee-block-3 a,
+		.bee-row-9 .bee-col-3 .bee-block-2 a,
+		.bee-row-9 .bee-col-3 .bee-block-3 a {
+			color: #8a3b8f
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-10 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-10 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-10 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-12 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-13 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-14 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-14 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-15 .bee-col-1 .bee-block-2 p:not(:last-child),
+		.bee-row-15 .bee-col-1 .bee-block-3 p:not(:last-child),
+		.bee-row-15 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-15 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-15 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-15 .bee-col-3 .bee-block-3 p:not(:last-child),
+		.bee-row-4 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-5 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-6 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-7 .bee-col-1 .bee-block-1 p:not(:last-child),
+		.bee-row-8 .bee-col-2 .bee-block-1 p:not(:last-child),
+		.bee-row-9 .bee-col-2 .bee-block-2 p:not(:last-child),
+		.bee-row-9 .bee-col-2 .bee-block-3 p:not(:last-child),
+		.bee-row-9 .bee-col-3 .bee-block-2 p:not(:last-child),
+		.bee-row-9 .bee-col-3 .bee-block-3 p:not(:last-child) {
+			margin-bottom: 16px
+		}
+
+		.bee-row-12 .bee-col-1 .bee-block-1,
+		.bee-row-5 .bee-col-1 .bee-block-1,
+		.bee-row-7 .bee-col-1 .bee-block-1 {
+			color: #393d47;
+			direction: ltr;
+			font-family: "Roboto Slab", Arial, "Helvetica Neue", Helvetica, sans-serif;
+			font-size: 70px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-13 .bee-col-2 .bee-block-1,
+		.bee-row-6 .bee-col-2 .bee-block-1,
+		.bee-row-8 .bee-col-2 .bee-block-1 {
+			color: #3c3c3c;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-2,
+		.bee-row-10 .bee-col-3 .bee-block-2,
+		.bee-row-9 .bee-col-2 .bee-block-2,
+		.bee-row-9 .bee-col-3 .bee-block-2 {
+			color: #393d47;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		.bee-row-10 .bee-col-2 .bee-block-3,
+		.bee-row-10 .bee-col-3 .bee-block-3,
+		.bee-row-9 .bee-col-2 .bee-block-3,
+		.bee-row-9 .bee-col-3 .bee-block-3 {
+			color: #393d47;
+			direction: ltr;
+			font-size: 24px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: center
+		}
+
+		@media (max-width:768px) {
+			.bee-form form {
+				width: 100% !important
+			}
+
+			.bee-menu ul.with-bee-hamburger {
+				display: none;
+				padding: 5px 0;
+				position: relative;
+				top: -4px
+			}
+
+			.bee-menu ul.with-bee-hamburger li {
+				display: block;
+				text-align: center
+			}
+
+			.bee-menu ul.with-bee-hamburger li a {
+				text-decoration: none
+			}
+
+			.bee-menu ul.with-bee-hamburger span {
+				display: none
+			}
+
+			#bee-hamburger-memu-r1c2m0:checked~ul,
+			.bee-row-content:not(.no_stack) {
+				display: block
+			}
+
+			.bee-row-12 .bee-col-1 .bee-block-1,
+			.bee-row-4 .bee-col-2 .bee-block-2 h1,
+			.bee-row-5 .bee-col-1 .bee-block-1,
+			.bee-row-7 .bee-col-1 .bee-block-1 {
+				font-size: 60px !important
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 .bee-hamburger-controls {
+				width: 36px;
+				height: 36px;
+				background-color: #199e59;
+				border-radius: 0
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 .bee-hamburger-controls span {
+				width: 18px;
+				height: 18px
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-open {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgd2lkdGg9IjY0IiB5PSI1MiIvPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB3aWR0aD0iNjQiIHk9IjI2Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 .bee-hamburger-controls span.bee-hamburger-close {
+				background-image: url("data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjY0IiB2aWV3Qm94PSIwIDAgNjQgNjQiIHdpZHRoPSI2NCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSIjZmZmZmZmIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxyZWN0IGhlaWdodD0iMTIiIHJ4PSI2IiB0cmFuc2Zvcm09Im1hdHJpeCgtLjcwNzEwNjc4IC0uNzA3MTA2NzggLjcwNzEwNjc4IC0uNzA3MTA2NzggMzEuOTkxMzc4IDc3LjIzNDAxOSkiIHdpZHRoPSI4MiIgeD0iLTkuMDA4NjIyIiB5PSIyNS45OTEzNzgiLz48cmVjdCBoZWlnaHQ9IjEyIiByeD0iNiIgdHJhbnNmb3JtPSJtYXRyaXgoLS43MDcxMDY3OCAuNzA3MTA2NzggLS43MDcxMDY3OCAtLjcwNzEwNjc4IDc3LjgxOTgwNiAzMi4yMzQwMTkpIiB3aWR0aD0iODIiIHg9Ii04Ljc2NTk4MSIgeT0iMjYuMjM0MDE5Ii8+PC9nPjwvc3ZnPg==");
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 ul.with-bee-hamburger {
+				background-color: #199e59
+			}
+
+			.bee-row-2 .bee-col-3 .bee-block-1 ul.with-bee-hamburger li,
+			.bee-row-2 .bee-col-3 .bee-block-1 ul.with-bee-hamburger li a {
+				color: #fff
+			}
+
+			#bee-hamburger-memu-r1c2m0:checked~.bee-hamburger-controls .bee-hamburger-open {
+				transform: translate(-50%, -50%) scaleY(0)
+			}
+
+			#bee-hamburger-memu-r1c2m0:checked~.bee-hamburger-controls .bee-hamburger-close {
+				transform: translate(-50%, -50%) scaleY(1)
+			}
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-2,
+		.bee-row-14 .bee-col-2 .bee-block-2,
+		.bee-row-14 .bee-col-3 .bee-block-2,
+		.bee-row-15 .bee-col-1 .bee-block-2,
+		.bee-row-15 .bee-col-2 .bee-block-2,
+		.bee-row-15 .bee-col-3 .bee-block-2 {
+			color: #3c3c3c;
+			direction: ltr;
+			font-size: 20px;
+			font-weight: 700;
+			letter-spacing: 0;
+			line-height: 150%;
+			text-align: left
+		}
+
+		.bee-row-14 .bee-col-1 .bee-block-3,
+		.bee-row-14 .bee-col-2 .bee-block-3,
+		.bee-row-14 .bee-col-3 .bee-block-3,
+		.bee-row-15 .bee-col-1 .bee-block-3,
+		.bee-row-15 .bee-col-2 .bee-block-3,
+		.bee-row-15 .bee-col-3 .bee-block-3 {
+			color: #3c3c3c;
+			direction: ltr;
+			font-size: 16px;
+			font-weight: 400;
+			letter-spacing: 0;
+			line-height: 120%;
+			text-align: left
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-1 .bee-icon-image {
+			padding: 5px 6px 5px 5px
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-1 .bee-icon:not(.bee-icon-first) .bee-content {
+			margin-left: 0
+		}
+
+		.bee-row-19 .bee-col-1 .bee-block-1 .bee-icon::not(.bee-icon-last) .bee-content {
+			margin-right: 0
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 form {
+			display: inline-block;
+			width: 100%
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 div.label,
+		.bee-row-17 .bee-col-4 .bee-block-2 label {
+			color: #fafafa;
+			line-height: 200%;
+			text-align: left;
+			display: block
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 ::-webkit-input-placeholder {
+			color: #000
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 :-moz-placeholder {
+			color: #000
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 ::-moz-placeholder {
+			color: #000
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 :-ms-input-placeholder {
+			color: #000
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 .bee-field>label:first-child,
+		.bee-row-17 .bee-col-4 .bee-block-2 div.label {
+			padding: 3px
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 input:not([type=checkbox]):not([type=radio]):not([type=image]) {
+			background-color: #fff;
+			border-bottom: 1px solid transparent;
+			border-left: 1px solid transparent;
+			border-radius: 4px;
+			border-right: 1px solid transparent;
+			border-top: 1px solid transparent;
+			color: #000;
+			padding: 5px;
+			min-height: 38px
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 input:not([type=checkbox]):not([type=radio]):focus {
+			outline-color: #22d21d
+		}
+
+		.bee-row-17 .bee-col-4 .bee-block-2 button {
+			background-color: #199e59;
+			border-bottom: 0 solid transparent;
+			border-left: 0 solid transparent;
+			border-radius: 4px;
+			border-right: 0px solid transparent;
+			border-top: 0 solid transparent;
+			color: #fff;
+			line-height: 200%;
+			padding: 5px 20px;
+			width: 100%
+		}
+	</style>
+</head>
+<body>
+<div class="bee-page-container">
+<div class="bee-row bee-row-1">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:15px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-2">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><img alt="Your Logo Light" class="bee-fixedwidth" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRHr-8XqO7A-C_5Qzejfk1jmvJmKwOU7xrww&usqp=CAU" style="max-width:103px;"/></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-divider">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w5">
+<div class="bee-block bee-block-1 bee-menu">
+<nav class="bee-menu"><input class="bee-hamburger-trigger" id="bee-hamburger-memu-r1c2m0" type="checkbox"/><label class="bee-hamburger-controls" for="bee-hamburger-memu-r1c2m0"><span class="bee-hamburger-open"></span><span class="bee-hamburger-close"></span></label>
+<ul class="bee-horizontal with-bee-hamburger">
+<li><a href="http://www.example.com" target="_self" title="">Home</a></li><span>|</span>
+<li><a href="http://www.example.com" target="_self" title="">Offline Trainig</a></li><span>|</span>
+<li><a href="http://www.example.com" target="_self" title="">Online Training</a></li><span>|</span>
+<li>CONTACT</li><span>|</span>
+<li>About </li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-3">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:30px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-4">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w1">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w5">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:20px;"></div>
+</div>
+<div class="bee-block bee-block-2 bee-heading">
+<h1 style="color:#199e59;direction:ltr;font-family:'Roboto Slab', Arial, 'Helvetica Neue', Helvetica, sans-serif;font-size:90px;font-weight:700;letter-spacing:normal;line-height:120%;text-align:left;margin-top:0;margin-bottom:0;"><span class="tinyMce-placeholder">Let's<br/>Be Social</span> </h1>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Learn web design for</p>
+<p>a bright feuture   👍</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 40px; padding-right: 40px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">DISCOVER</span></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w6">
+<div class="bee-block bee-block-1 bee-image"><img alt="Hero Image" class="bee-center bee-fixedwidth" src="https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8d2ViJTIwZGVzaWdufGVufDB8fDB8fHww&auto=format&fit=crop&w=400&q=60" style="max-width:317px;"/></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-5">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>Welcome!</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-6">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w8">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>Inspiration comes in many forms, and <a data-wpil-keyword-link="linked" href="https://www.elegantthemes.com/blog/business/the-importance-of-continuing-education-and-professional-development" style="text-decoration: underline;" title="professional development">professional development</a> never ends. With that in mind, we’ve put together a massive list of web design blogs that can keep your brain fed for the entire year. And don’t worry – you won’t find any duds on this list. We respect your time and feel like you deserve only the best of the best. That’s why we’ve gathered only the web design blogs that have been updated recently. Fire up your <a href="https://www.elegantthemes.com/blog/marketing/how-to-use-feedly-the-ultimate-guide" style="text-decoration: underline;">Feedly</a> account and get ready to add more than a few subscriptions.</p>
+</div>
+<div class="bee-block bee-block-2 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 40px; padding-right: 40px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">READ MORE</span></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-7">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>Follow Us</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-8">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w8">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>The platform also boasts an active community of over 15,000 members on social media platforms like Facebook, Pinterest, and Twitter. This community allows designers to interact with like-minded individuals in their field, share ideas, and stay up-to-date with the latest developments in the industry.</p>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-9">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com" target="_self"><img alt="Social Icon Big" class="bee-center bee-autowidth" src="images/face-10.png" style="max-width:236px;"/></a></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Follow Us on Facebook</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web Design</p>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com" target="_self"><img alt="Social Icon Big" class="bee-center bee-autowidth" src="images/insta-10.png" style="max-width:236px;"/></a></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Follow Us on Instagram</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web Design</p>
+</div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-10">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com" target="_self"><img alt="Social Icon Big" class="bee-center bee-autowidth" src="images/twit-10.png" style="max-width:236px;"/></a></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Follow Us on Twitter</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web Design</p>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><a href="http://www.example.com" target="_self"><img alt="Social Icon Big" class="bee-center bee-autowidth" src="images/linked-10.png" style="max-width:236px;"/></a></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Follow Us on Linkedin</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web Designing</p>
+</div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-11">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:60px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-12">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>Our Feutures</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-13">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w8">
+<div class="bee-block bee-block-1 bee-paragraph">
+<p>In today's fast-paced world, keeping up with the latest web design trends and techniques is essential to stay ahead of the competition. Visual design alone influences a company's credibility for <a href="https://credibility.stanford.edu/guidelines/index.html#chi00" style="text-decoration: underline;">75% of users</a>.</p>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w2">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:1px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-14">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-01.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Web Developer</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>In this blog, we've compiled a list of the top 20 web design blogs that are worth following in 2023.</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-02.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>About Web</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web design is constantly evolving, and what was popular last year may not be relevant today. By reading web design blogs, you can stay up-to-date with the latest trends in web design, such as responsive design, minimalism, flat design, etc.</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-03.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Offline Training</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web design blogs are a great resource for learning new techniques and UX design tools. No matter your level of experience in design, there is always room to acquire new knowledge and skills to create more effective websites.</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-15">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-04.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>Online Training</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Web design blogs offer endless ideas for your projects, whether starting anew or revamping, you can get hundreds of ideas in just a matter of seconds!</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-05.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>About Development</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Good web design is not just about aesthetics; it's also about creating a great user experience. Reading web design blogs can help you learn about best practices for user experience design, such as creating intuitive navigation to ensure fast loading times and optimizing for mobile devices.</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w4">
+<div class="bee-block bee-block-1 bee-image"><img alt="blog Image" class="bee-center bee-autowidth" src="images/blog-image-06.png" style="max-width:301px;"/></div>
+<div class="bee-block bee-block-2 bee-paragraph">
+<p>About Course</p>
+</div>
+<div class="bee-block bee-block-3 bee-paragraph">
+<p>Our blog covers various topics, including design and development updates, productivity tips for designers and developers, and practical tips that design teams can implement immediately.</p>
+</div>
+<div class="bee-block bee-block-4 bee-button"><a class="bee-button-content" href="http://www.example.com" style="font-size: 14px; background-color: #3c3c3c; border-bottom: 0px solid transparent; border-left: 0px solid transparent; border-radius: 20px; border-right: 0px solid transparent; border-top: 0px solid transparent; color: #ffffff; direction: ltr; font-family: inherit; font-weight: 400; letter-spacing: 1px; max-width: 100%; padding-bottom: 5px; padding-left: 20px; padding-right: 20px; padding-top: 5px; width: auto; display: inline-block;" target="_self"><span style="word-break: break-word; font-size: 14px; line-height: 200%; letter-spacing: 1px;">Go to Post</span></a></div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-16">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-spacer">
+<div class="spacer" style="height:20px;"></div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-17">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w3">
+<div class="bee-block bee-block-1 bee-image"><img alt="Your Logo Light" class="bee-center bee-fixedwidth" src="data:image/jpeg;base64,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" style="max-width:108px;"/></div>
+<div class="bee-block bee-block-2 bee-social">
+<div class="content"><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.facebook.com" target="_self"><img alt="Facebook" src="images/facebook2x.png" title="facebook"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.twitter.com" target="_self"><img alt="Twitter" src="images/twitter2x.png" title="twitter"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.instagram.com" target="_self"><img alt="Instagram" src="images/instagram2x.png" title="instagram"/></a></span><span class="icon" style="padding:0 2.5px 0 2.5px;"><a href="https://www.linkedin.com" target="_self"><img alt="LinkedIn" src="images/linkedin2x.png" title="LinkedIn"/></a></span></div>
+</div>
+</div>
+<div class="bee-col bee-col-2 bee-col-w3">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #fafafa;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 18px; line-height: 21px;"><strong style=""><span style="line-height: 14px;">About</span></strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #fafafa;">
+<p style="font-size: 12px; line-height: 18px;">Learn web design and earn money by designing web site.</p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-3 bee-col-w3">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #fafafa;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 18px; line-height: 21px;"><strong style=""><span style="line-height: 14px;">Contact Us</span></strong></span></p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 150%; font-family: inherit; color: #fafafa;">
+<p style="font-size: 12px; line-height: 18px;">Shajahanpur , Bogura</p>
+<p style="font-size: 12px; line-height: 18px;">Office : 099 564 688</p>
+</div>
+</div>
+</div>
+<div class="bee-col bee-col-4 bee-col-w3">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="font-size: 12px; line-height: 120%; font-family: inherit; color: #ffffff;">
+<p style="font-size: 12px; line-height: 14px;">Email :</p>
+</div>
+</div>
+<div class="bee-block bee-block-2 bee-form">
+<form accept-charset="UTF-8" action="ACTION_PLACEHOLDER" autocomplete="on" enctype="multipart/form-data" method="post" target="_self">
+<div class="bee-form-row">
+<div class="bee-field bee-field-r16c3m1i3"><input id="r16c3m1i3" name="email" placeholder="youremail@example.com" required="" type="email"/></div>
+</div>
+<div class="bee-form-row">
+<div class="bee-field bee-field-r16c3m1i11">
+<div class="bee-button-container"><button id="r16c3m1i11" name="submit" type="submit" value="SIGN UP">SIGN UP</button></div>
+</div>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-18">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-text">
+<div class="bee-text-content" style="line-height: 120%; font-size: 12px; font-family: inherit; color: #868686;">
+<p style="font-size: 14px; line-height: 16px; text-align: center;"><span style="font-size: 12px; line-height: 14px;">2022 © All Rights Reserved</span></p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="bee-row bee-row-19">
+<div class="bee-row-content">
+<div class="bee-col bee-col-1 bee-col-w12">
+<div class="bee-block bee-block-1 bee-icons">
+<div class="bee-icon bee-icon-last">
+<div class="bee-content">
+<div class="bee-icon-image"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE"><img alt="Designed with BEE" height="32px" src="images/bee.png" width="auto"/></a></div>
+<div class="bee-icon-label bee-icon-label-right"><a href="https://www.designedwithbee.com/" target="_blank" title="Designed with BEE">Designed with BEE</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</body>
+</html>
